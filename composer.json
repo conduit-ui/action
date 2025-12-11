@@ -1,5 +1,5 @@
 {
-    "name": "conduit-ui/github-actions",
+    "name": "conduit-ui/action",
     "description": "GitHub Actions management package built on github-connector",
     "keywords": [
         "github",
