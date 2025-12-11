@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace ConduitUI\Actions\Traits;
+namespace ConduitUI\Action\Traits;
 
-use ConduitUI\Actions\Data\Job;
+use ConduitUI\Action\Data\Job;
 use Illuminate\Support\Collection;
 
 trait ManagesJobs
 {
     /**
-     * @return \Illuminate\Support\Collection<int, \ConduitUI\Actions\Data\Job>
+     * @return \Illuminate\Support\Collection<int, \ConduitUI\Action\Data\Job>
      */
     public function listJobsForWorkflowRun(string $owner, string $repo, int $runId, array $filters = []): Collection
     {

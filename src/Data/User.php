@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ConduitUI\Actions\Data;
+namespace ConduitUI\Action\Data;
 
 readonly class User
 {

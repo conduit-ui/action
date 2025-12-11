@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ConduitUI\Actions;
+namespace ConduitUI\Action;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

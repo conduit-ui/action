@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace ConduitUI\Actions\Traits;
+namespace ConduitUI\Action\Traits;
 
-use ConduitUI\Actions\Data\WorkflowRun;
+use ConduitUI\Action\Data\WorkflowRun;
 use Illuminate\Support\Collection;
 
 trait ManagesWorkflowRuns
 {
     /**
-     * @return \Illuminate\Support\Collection<int, \ConduitUI\Actions\Data\WorkflowRun>
+     * @return \Illuminate\Support\Collection<int, \ConduitUI\Action\Data\WorkflowRun>
      */
     public function listWorkflowRuns(string $owner, string $repo, array $filters = []): Collection
     {

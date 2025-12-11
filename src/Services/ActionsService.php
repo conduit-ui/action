@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace ConduitUI\Actions\Services;
+namespace ConduitUI\Action\Services;
 
 use ConduitUI\GithubConnector\GithubConnector;
-use ConduitUI\Actions\Contracts\ActionsServiceInterface;
-use ConduitUI\Actions\Traits\ManagesArtifacts;
-use ConduitUI\Actions\Traits\ManagesJobs;
-use ConduitUI\Actions\Traits\ManagesWorkflowRuns;
-use ConduitUI\Actions\Traits\ManagesWorkflows;
+use ConduitUI\Action\Contracts\ActionsServiceInterface;
+use ConduitUI\Action\Traits\ManagesArtifacts;
+use ConduitUI\Action\Traits\ManagesJobs;
+use ConduitUI\Action\Traits\ManagesWorkflowRuns;
+use ConduitUI\Action\Traits\ManagesWorkflows;
 
 class ActionsService implements ActionsServiceInterface
 {

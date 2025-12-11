@@ -1,27 +1,26 @@
 {
     "name": "conduit-ui/action",
-    "description": "GitHub Actions management package built on github-connector",
+    "description": "GitHub Actions operations for the Conduit agent ecosystem",
     "keywords": [
         "github",
         "actions",
         "workflows",
         "api",
         "conduit-ui",
-        "laravel",
-        "saloon"
+        "agent",
+        "laravel"
     ],
-    "homepage": "https://github.com/conduit-ui/actions",
+    "homepage": "https://github.com/conduit-ui/action",
     "license": "MIT",
     "authors": [
         {
-            "name": "Conduit UI",
-            "email": "team@conduit-ui.dev",
-            "role": "Developer"
+            "name": "Jordan Partridge",
+            "email": "jordan@partridge.rocks"
         }
     ],
     "require": {
-        "php": "^8.2|^8.3|^8.4",
-        "conduit-ui/github-connector": "dev-master",
+        "php": "^8.2",
+        "conduit-ui/connector": "^1.0",
         "illuminate/contracts": "^10.0||^11.0||^12.0",
         "saloonphp/saloon": "^3.10",
         "spatie/laravel-package-tools": "^1.16|^2.0"
@@ -41,12 +40,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ConduitUI\\Actions\\": "src/"
+            "ConduitUI\\Action\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ConduitUI\\Actions\\Tests\\": "tests/",
+            "ConduitUI\\Action\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -78,10 +77,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ConduitUI\\Actions\\ActionsServiceProvider"
+                "ConduitUI\\Action\\ActionServiceProvider"
             ],
             "aliases": {
-                "Actions": "ConduitUI\\Actions\\Facades\\Actions"
+                "Action": "ConduitUI\\Action\\Facades\\Action"
             }
         }
     },

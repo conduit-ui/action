@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace ConduitUI\Actions\Traits;
+namespace ConduitUI\Action\Traits;
 
-use ConduitUI\Actions\Data\Artifact;
+use ConduitUI\Action\Data\Artifact;
 use Illuminate\Support\Collection;
 
 trait ManagesArtifacts
 {
     /**
-     * @return \Illuminate\Support\Collection<int, \ConduitUI\Actions\Data\Artifact>
+     * @return \Illuminate\Support\Collection<int, \ConduitUI\Action\Data\Artifact>
      */
     public function listArtifactsForRepository(string $owner, string $repo, array $filters = []): Collection
     {
@@ -25,7 +25,7 @@ trait ManagesArtifacts
     }
 
     /**
-     * @return \Illuminate\Support\Collection<int, \ConduitUI\Actions\Data\Artifact>
+     * @return \Illuminate\Support\Collection<int, \ConduitUI\Action\Data\Artifact>
      */
     public function listArtifactsForWorkflowRun(string $owner, string $repo, int $runId): Collection
     {

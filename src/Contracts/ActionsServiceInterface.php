@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace ConduitUI\Actions\Contracts;
+namespace ConduitUI\Action\Contracts;
 
-use ConduitUI\Actions\Data\Artifact;
-use ConduitUI\Actions\Data\Job;
-use ConduitUI\Actions\Data\Workflow;
-use ConduitUI\Actions\Data\WorkflowRun;
+use ConduitUI\Action\Data\Artifact;
+use ConduitUI\Action\Data\Job;
+use ConduitUI\Action\Data\Workflow;
+use ConduitUI\Action\Data\WorkflowRun;
 use Illuminate\Support\Collection;
 
 interface ActionsServiceInterface

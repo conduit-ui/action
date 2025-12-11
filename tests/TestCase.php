@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ConduitUI\Actions\Tests;
+namespace ConduitUI\Action\Tests;
 
-use ConduitUI\Actions\ActionsServiceProvider;
+use ConduitUI\Action\ActionsServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra

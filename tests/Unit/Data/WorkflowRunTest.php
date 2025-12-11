@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use ConduitUI\Actions\Data\WorkflowRun;
+use ConduitUI\Action\Data\WorkflowRun;
 
 it('can create a workflow run from array', function () {
     $data = [
