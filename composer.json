@@ -1,0 +1,90 @@
+{
+    "name": "conduit-ui/github-actions",
+    "description": "GitHub Actions management package built on github-connector",
+    "keywords": [
+        "github",
+        "actions",
+        "workflows",
+        "api",
+        "conduit-ui",
+        "laravel",
+        "saloon"
+    ],
+    "homepage": "https://github.com/conduit-ui/actions",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Conduit UI",
+            "email": "team@conduit-ui.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2|^8.3|^8.4",
+        "conduit-ui/github-connector": "dev-master",
+        "illuminate/contracts": "^10.0||^11.0||^12.0",
+        "saloonphp/saloon": "^3.10",
+        "spatie/laravel-package-tools": "^1.16|^2.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.14",
+        "larastan/larastan": "^2.0",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^7.0||^8.0",
+        "orchestra/testbench": "^8.0||^9.0||^10.0||^11.0",
+        "pestphp/pest": "^2.34||^3.0",
+        "pestphp/pest-plugin-arch": "^2.7||^3.0",
+        "pestphp/pest-plugin-laravel": "^2.3||^3.0",
+        "phpstan/extension-installer": "^1.3",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
+        "phpstan/phpstan-phpunit": "^1.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConduitUI\\Actions\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ConduitUI\\Actions\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@composer run prepare",
+        "clear": "@php vendor/bin/testbench package:purge-github-actions --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": [
+            "@composer run prepare",
+            "@php vendor/bin/testbench workbench:build --ansi"
+        ],
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "@composer run build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ConduitUI\\Actions\\ActionsServiceProvider"
+            ],
+            "aliases": {
+                "Actions": "ConduitUI\\Actions\\Facades\\Actions"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
